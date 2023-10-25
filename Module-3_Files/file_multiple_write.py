@@ -20,4 +20,4 @@ def getdata():
 
         fl.write(f"ID:{id}\nName:{name}\n")
     
-getdata()
+getdata()   ````````````````````````````````
