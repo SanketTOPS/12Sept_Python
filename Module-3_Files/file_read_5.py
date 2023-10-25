@@ -1,6 +1,6 @@
-fl=open('newtest.txt','w')
+fl=open('newtest.txt','r+')
 
-#print(fl.read())
+print(fl.read())
 
 #print(fl.readline())
 
@@ -14,7 +14,9 @@ for i in fl:
     print(f"Line:[{n}]={i}")
     n+=1"""
 
-if fl.readable():
+"""if fl.readable():
     print("Yes...File is readable...")
 else:
-    print("No...File is not readable!")
+    print("No...File is not readable!")"""
+
+fl.write("\nHello Python!")
