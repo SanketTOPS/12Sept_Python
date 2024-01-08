@@ -16,9 +16,17 @@
     <center>
         <h1
             style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: rgb(9, 29, 71);">
-            Welcome to Home</h1>
+            Welcome, {{user}}</h1>
     </center>
     <hr>
+    <hr>
+    <center>
+        {% if user is none %}
+        <a class="btn btn-warning" href="/">Login</a>
+        {% else %}
+        <a class="btn btn-danger" href="/userlogout">Logout</a>
+        {% endif %}
+    </center>
    
    
 </body>
