@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'BatchProject.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "27septbatchproj",
+        "NAME": "12septprojectdb",
         "USER": "root",
         "PASSWORD": "",
         "HOST": "127.0.0.1",
@@ -110,11 +110,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
