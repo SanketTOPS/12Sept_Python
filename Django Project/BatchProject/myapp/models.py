@@ -12,3 +12,4 @@ class usersignup(models.Model):
     city=models.CharField(max_length=20)
     state=models.CharField(max_length=20)
     mobile=models.BigIntegerField()
+
