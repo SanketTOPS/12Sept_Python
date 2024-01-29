@@ -1,0 +1,17 @@
+MWF
+====================================
+10:00 to 11:00 - 06Oct_DM_Sanket
+11:00 to 12:30 - 12Sep_Python_Sanket
+02:00 to 03:30 - 12Jul_Python
+03:30 to 04:30 - 13Dec_Interview Preparation - Revision_Sanket
+05:00 to 06:00 - 25Dec_SE 
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+TTS
+==================================================
+08:00 to 09:30 - 09Jan_Python_Sanket
+09:30 to 11:00 - 10Oct_Python_Sanket
+11:00 to 12:30 - 07Aug_Python_Sanket	
+02:00 to 03:00 - 07Dec_Python_Sanket
+03:30 to 05:00 - 08Aug_DM

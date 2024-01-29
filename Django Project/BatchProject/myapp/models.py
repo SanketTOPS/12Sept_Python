@@ -13,3 +13,10 @@ class usersignup(models.Model):
     state=models.CharField(max_length=20)
     mobile=models.BigIntegerField()
 
+
+class notesdata(models.Model):
+    created=models.DateTimeField(auto_now_add=True)
+    title=models.CharField(max_length=100)
+    cate=models.CharField(max_length=100)
+    myfile=models.FileField(upload_to='User_Notes')
+    desc=models.TextField()

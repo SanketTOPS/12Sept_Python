@@ -10,10 +10,10 @@ def index(request):
     if request.method=='POST':
         if request.POST.get('signup')=='signup':
             newuser=signupForm(request.POST)
-            username=""
             if newuser.is_valid():
+                username=newuser.cleaned_data.get('username')
                 try:
-                    unm=newuser.cleaned_data.get(username)
+                    usersignup.objects.get(username=username)
                     print("Username is already exists!")
                     msg="Username is already exists!"
                 except usersignup.DoesNotExist:
@@ -43,6 +43,13 @@ def index(request):
 
 def notes(request):
     user=request.session.get('user')
+    if request.method=='POST':
+        newnotes=notesForm(request.POST, request.FILES)
+        if newnotes.is_valid():
+            newnotes.save()
+            print("Your notes has been submitted!")
+        else:
+            print(newnotes.errors)
     return render(request,'notes.html',{'user':user})
 
 def about(request):
