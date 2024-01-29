@@ -5,6 +5,7 @@ from django.contrib.auth import logout
 
 # Create your views here.
 
+
 def index(request):
     msg=""
     if request.method=='POST':
@@ -44,6 +45,7 @@ def index(request):
 def notes(request):
     user=request.session.get('user')
     if request.method=='POST':
+
         newnotes=notesForm(request.POST, request.FILES)
         if newnotes.is_valid():
             newnotes.save()
