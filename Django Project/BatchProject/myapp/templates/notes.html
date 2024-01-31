@@ -203,17 +203,20 @@
     </div>
     <!-- Signup Modal End -->
 
+    {% if user %}
     <!-- Notes Form Start -->
     <div class="container my-5">
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
 
             <div class="form-floating mb-3">
-                <input type="text" name="title" style="background-color: rgb(197, 211, 238);" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="text" name="title" style="background-color: rgb(197, 211, 238);" class="form-control"
+                    id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Title</label>
             </div>
 
-            <select class="form-select form-select-lg mb-3" style="background-color: rgb(197, 211, 238);" name="cate" aria-label="Large select example">
+            <select class="form-select form-select-lg mb-3" style="background-color: rgb(197, 211, 238);" name="cate"
+                aria-label="Large select example">
                 <option selected>Select your problem category's</option>
                 <option>Core Python</option>
                 <option>Advance Python</option>
@@ -225,17 +228,58 @@
 
             <div>
                 <label for="formFileLg" class="form-label">Upload your Error's Photos/Screenshots</label>
-                <input class="form-control form-control-lg" style="background-color: rgb(197, 211, 238);" name="myfile" id="formFileLg" type="file">
+                <input class="form-control form-control-lg" style="background-color: rgb(197, 211, 238);" name="myfile"
+                    id="formFileLg" type="file">
             </div>
 
             <div class="mb-3 my-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Error's Descriptions</label>
-                <textarea class="form-control" style="background-color: rgb(197, 211, 238);" name="desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" style="background-color: rgb(197, 211, 238);" name="desc"
+                    id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-dark btn-lg">Submit POST</button>
         </form>
     </div>
     <!-- Notes Form End -->
+    {% else %}
+
+    <div class="container text-center my-4">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/images/python_logo.jfif" height="300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Python</h5>
+                        <p class="card-text">Learn Python programming for free</p>
+                        <a href="/" class="btn btn-primary">Book Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/images/java_logo.png" height="300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">JAVA</h5>
+                        <p class="card-text">Best JAVA Training in Rajkot</p>
+                        <a href="/" class="btn btn-primary">Book Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/images/php_logo.png" height="300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">PHP</h5>
+                        <p class="card-text">Internship with PHP Project</p>
+                        <a href="/" class="btn btn-primary">Book Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
 </body>
 
 </html>
