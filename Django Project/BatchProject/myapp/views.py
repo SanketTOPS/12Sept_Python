@@ -2,7 +2,8 @@ from django.shortcuts import render,redirect
 from .forms import *
 from .models import *
 from django.contrib.auth import logout
-
+from django.core.mail import send_mail
+from BatchProject import settings
 # Create your views here.
 
 
@@ -58,6 +59,21 @@ def about(request):
     return render(request,'about.html')
 
 def contact(request):
+    if request.method=='POST':
+        newfeedback=feedbackForm(request.POST)
+        if newfeedback.is_valid():
+            newfeedback.save()
+            print("Your feedback has been submitted!")
+
+            #Email Sending
+            sub=request.POST['subject']
+            msg=f'Dear User!\n\nThanks for your feedback\nWe will connect shortly!\n\nThank & Regards!\nNotesApp Team\n+91 9724799469 | help@notesapp.com | www.notesapp.com'
+            from_ID=settings.EMAIL_HOST_USER
+            to_ID=[request.POST['email']]
+            send_mail(subject=sub,message=msg,from_email=from_ID,recipient_list=to_ID)
+
+        else:
+            print(newfeedback.errors)
     return render(request,'contact.html')
 
 def profile(request):

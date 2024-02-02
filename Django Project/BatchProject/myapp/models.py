@@ -20,3 +20,10 @@ class notesdata(models.Model):
     cate=models.CharField(max_length=100)
     myfile=models.FileField(upload_to='User_Notes')
     desc=models.TextField()
+
+
+class feedback(models.Model):
+    fullname=models.CharField(max_length=30)
+    email=models.EmailField()
+    subject=models.CharField(max_length=100)
+    msg=models.TextField()
