@@ -124,10 +124,13 @@ USE_TZ = False
 
 STATIC_URL = 'static/'
 
+
+#local server
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+#collectstaic (live server)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
